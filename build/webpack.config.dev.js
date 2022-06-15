@@ -5,7 +5,8 @@ const __root = resolve(__dirname, '../');
 
 const commonCssLoader = ['vue-style-loader', 'css-loader', 'postcss-loader'];
 
-require('dotenv').config({ path: resolve(__root, './env/.env') });
+require('dotenv').config({ path: resolve(__root, './env/.env.local') });
+console.log('---PROXY_URL', process.env.PROXY_URL);
 
 const cssRules = [
   {

@@ -1,4 +1,6 @@
 #!/bin/sh
+export FORCE_COLOR="1" # colorful
+
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no-install commitlint --edit $1
+pnpx --no-install commitlint --edit $1

@@ -2,6 +2,7 @@
   "name": "vue2webpack",
   "version": "1.0.0",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "cross-env BABEL_ENV=default webpack serve -c ./build/webpack.config.dev.js --open",
     "build": "cross-env BABEL_ENV=system webpack build -c ./build/webpack.config.prod.js",
     "prepare": "husky install"

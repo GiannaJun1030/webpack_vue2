@@ -1,3 +1,7 @@
+<template>
+  <div class="hello">hello</div>
+</template>
+
 <script>
 export default {
   name: 'CHello',
@@ -16,4 +20,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hello {
+  background-color: aqua;
+  color: azure;
+}
+</style>

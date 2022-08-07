@@ -44,6 +44,7 @@ specifiers:
   webpack-cli: ^4.9.2
   webpack-dev-server: ^4.9.0
   webpack-merge: ^5.8.0
+  webpackbar: ^5.0.2
 
 dependencies:
   '@babel/plugin-transform-runtime': 7.18.5_@babel+core@7.17.10
@@ -91,6 +92,7 @@ devDependencies:
   webpack-cli: 4.9.2_e12b136d9a821d211692f1ec9717cf12
   webpack-dev-server: 4.9.0_webpack-cli@4.9.2+webpack@5.72.0
   webpack-merge: 5.8.0
+  webpackbar: 5.0.2_webpack@5.72.0
 
 packages:
 
@@ -2612,6 +2614,10 @@ packages:
   /connect-history-api-fallback/1.6.0:
     resolution: {integrity: sha512-e54B99q/OUoH64zYYRf3HBP5z24G38h5D3qXu23JGRoigpX5Ss4r9ZnDk3g0Z8uQC2x2lPaJ+UlWBc1ZWBWdLg==}
     engines: {node: '>=0.8'}
+    dev: true
+
+  /consola/2.15.3:
+    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
   /consolidate/0.15.1:
@@ -5247,6 +5253,11 @@ packages:
       renderkid: 3.0.0
     dev: true
 
+  /pretty-time/1.1.0:
+    resolution: {integrity: sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==}
+    engines: {node: '>=4'}
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
@@ -5858,6 +5869,10 @@ packages:
   /statuses/2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /std-env/3.1.1:
+    resolution: {integrity: sha512-/c645XdExBypL01TpFKiG/3RAa/Qmu+zRi0MwAmrdEkwHNuN0ebo8ccAXBBDa5Z0QOJgBskUIbuCK91x0sCVEw==}
     dev: true
 
   /string-argv/0.3.1:
@@ -6511,6 +6526,19 @@ packages:
       - '@swc/core'
       - esbuild
       - uglify-js
+    dev: true
+
+  /webpackbar/5.0.2_webpack@5.72.0:
+    resolution: {integrity: sha512-BmFJo7veBDgQzfWXl/wwYXr/VFus0614qZ8i9znqcl9fnEdiVkdbi0TedLQ6xAK92HZHDJ0QmyQ0fmuZPAgCYQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      webpack: 3 || 4 || 5
+    dependencies:
+      chalk: 4.1.2
+      consola: 2.15.3
+      pretty-time: 1.1.0
+      std-env: 3.1.1
+      webpack: 5.72.0_webpack-cli@4.9.2
     dev: true
 
   /websocket-driver/0.7.4:

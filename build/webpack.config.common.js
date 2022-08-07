@@ -1,5 +1,6 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 const { resolve } = require('path');
 const __root = resolve(__dirname, '../');
@@ -52,6 +53,12 @@ module.exports = {
   module: {
     rules: [...vueRules, ...resRules, ...babelRules],
   },
+  optimization: {
+    usedExports: true,
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
@@ -59,6 +66,9 @@ module.exports = {
       templateParameters: {
         title: name,
       },
+    }),
+    new WebpackBar({
+      color: '#9013fe',
     }),
   ],
 };

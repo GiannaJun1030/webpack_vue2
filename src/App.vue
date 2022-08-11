@@ -1,8 +1,5 @@
 <template>
-  <div>
-    测试
-    <router-view> </router-view>
-  </div>
+  <router-view />
 </template>
 
 <script>
@@ -18,16 +15,7 @@ export default {
       img2: arrow2,
     };
   },
-  mounted() {
-    const a = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(11);
-      }, 1000);
-    });
-    a.then((res) => {
-      console.log(res, 123);
-    });
-  },
+  mounted() {},
   methods: {},
 };
 </script>

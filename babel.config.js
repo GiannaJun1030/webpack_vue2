@@ -1,4 +1,3 @@
-console.log('--BABEL_ENV', process.env.BABEL_ENV);
 module.exports = {
   presets: ['@vue/babel-preset-jsx'],
   env: {

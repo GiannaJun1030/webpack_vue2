@@ -36,6 +36,9 @@ const config = {
   devServer: {
     historyApiFallback: true,
     port: 'auto',
+    compress: true,
+    open: true,
+    hot: true,
     proxy: {
       '/api': {
         target: 'http://localhost:3000/',
@@ -52,9 +55,6 @@ const config = {
         },
       },
     },
-    compress: true,
-    open: true,
-    hot: true,
   },
 };
 

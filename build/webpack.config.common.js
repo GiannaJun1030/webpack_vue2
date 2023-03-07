@@ -1,5 +1,6 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 const { resolve } = require('path');
@@ -38,7 +39,7 @@ module.exports = {
     path: resolve(__root, 'dist'),
     clean: true,
     filename: '[name].bundle.[contenthash:8].js',
-    assetModuleFilename: 'assets/[name].[hash][ext][query]',
+    assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
     library: {
       name: `${name}@${version}`,
       type: 'umd',
@@ -53,12 +54,6 @@ module.exports = {
   module: {
     rules: [...vueRules, ...resRules, ...babelRules],
   },
-  optimization: {
-    usedExports: true,
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
@@ -67,8 +62,13 @@ module.exports = {
         title: name,
       },
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: resolve(__root, 'public'), to: resolve(__root, 'dist') },
+      ],
+    }),
     new WebpackBar({
-      color: '#9013fe',
+      color: '#d5ff80',
     }),
   ],
 };

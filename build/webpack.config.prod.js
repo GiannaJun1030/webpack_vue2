@@ -71,7 +71,9 @@ const config = {
       ignoreOrder: false,
     }),
     new CompressionPlugin({
-      algorithm: 'gzip',
+      test: /\.js$|\.html$|\.css$/, // 匹配需要压缩的文件类型
+      threshold: 1024, // 大于 1KB 的文件才进行压缩
+      minRatio: 0.8, // 压缩比例达到 80% 时才进行压缩
     }),
   ],
 };

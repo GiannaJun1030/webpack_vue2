@@ -33,6 +33,7 @@ const config = {
   module: {
     rules: [...cssRules],
   },
+  cache: true,
   devServer: {
     historyApiFallback: true,
     port: 'auto',

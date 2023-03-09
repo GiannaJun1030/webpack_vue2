@@ -56,18 +56,12 @@ const config = {
     },
     minimize: true,
     minimizer: [
+      '...',
       new TerserPlugin({
-        parallel: true,
         extractComments: false,
-        terserOptions: {
-          mangle: {
-            safari10: true,
-          },
-        },
       }),
-      new CssMinimizerPlugin({
-        parallel: true,
-      }),
+      '...',
+      new CssMinimizerPlugin(),
     ],
   },
   plugins: [
